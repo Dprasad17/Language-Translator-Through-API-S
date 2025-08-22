@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Language Translator Through API'S</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header>
+      <h1>🌍 Language Translator</h1>
+      <button id="themeToggle">🌙Dark</button>
+    </header>
+
+    <!-- Translator Card -->
+    <div class="card">
+      <textarea id="inputText" placeholder="Type text here..."></textarea>
+
+      <div class="selectors">
+        <select id="fromLang">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="te">Telugu</option>
+          <option value="ta">Tamil</option>
+          <option value="kn">Kannada</option>
+          <option value="ml">Malayalam</option>
+          <option value="bn">Bengali</option>
+          <option value="gu">Gujarati</option>
+          <option value="mr">Marathi</option>
+          <option value="pa">Punjabi</option>
+          <option value="ur">Urdu</option>
+        </select>
+
+        <span class="arrow">➡</span>
+
+        <select id="toLang">
+          <option value="hi">Hindi</option>
+          <option value="en">English</option>
+          <option value="te">Telugu</option>
+          <option value="ta">Tamil</option>
+          <option value="kn">Kannada</option>
+          <option value="ml">Malayalam</option>
+          <option value="bn">Bengali</option>
+          <option value="gu">Gujarati</option>
+          <option value="mr">Marathi</option>
+          <option value="pa">Punjabi</option>
+          <option value="ur">Urdu</option>
+        </select>
+      </div>
+
+      <button id="translateBtn">✨Translate</button>
+
+      <div id="resultBox">
+        <p id="result">Your translation will appear here...</p>
+        <div class="result-actions">
+          <button id="copyResult">📋Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>Made with ❤️ by Durga Prasad</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

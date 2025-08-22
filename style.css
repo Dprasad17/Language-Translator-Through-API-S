@@ -1,0 +1,216 @@
+/* Root variables */
+:root {
+  --bg: #f5f5f5;
+  --text: #2c3e50;
+  --card: #fff;
+  --button-bg: #3498db;
+  --button-hover: #2980b9;
+  --result-bg: #ecf0f1;
+}
+
+/* Dark theme */
+.dark {
+  --bg: #121212;
+  --text: #ecf0f1;
+  --card: #1e1e1e;
+  --button-bg: #9b59b6;
+  --button-hover: #8e44ad;
+  --result-bg: #2c2c2c;
+}
+
+/* General Page */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.app {
+  width: 100%;
+  max-width: 520px;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  animation: fadeIn 1s ease;
+}
+
+#themeToggle {
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#themeToggle:hover {
+  background: var(--button-hover);
+  transform: scale(1.05);
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideUp 0.8s ease;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+  transition: border 0.3s ease;
+}
+
+textarea:focus {
+  border-color: var(--button-bg);
+}
+
+/* Dropdowns */
+.selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--button-bg);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.arrow {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Button */
+button#translateBtn {
+  width: 100%;
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button#translateBtn:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Result Box */
+#resultBox {
+  margin-top: 20px;
+  background: var(--result-bg);
+  border-radius: 12px;
+  padding: 15px;
+  min-height: 60px;
+  animation: fadeIn 1s ease;
+}
+
+#result {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--text);
+}
+
+/* Actions */
+.result-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.result-actions button {
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.result-actions button:hover {
+  background: var(--button-hover);
+}
+
+/* Footer */
+footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .app {
+    width: 100%;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  textarea {
+    height: 80px;
+  }
+
+  button#translateBtn {
+    font-size: 14px;
+  }
+
+  #resultBox {
+    padding: 10px;
+  }
+}
